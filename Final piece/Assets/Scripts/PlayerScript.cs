@@ -4,38 +4,49 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    //public Animator anim;
+    private SpriteRenderer sr;
+    public Animator anim;
     public GameObject player;
     public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Running();
+        Jumping();
     }
 
 
     void Running()
     {
-        //anim.SetBool("IsRunning", false);
+        anim.SetBool("IsRunning", false);
+        sr.flipX = false;
         float xv = 0;
         if (Input.GetKey("d"))
         {
-            xv = 10;
-            //anim.SetBool("IsRunning",true);
+            xv = 5;
+            anim.SetBool("IsRunning",true);
         }
         if (Input.GetKey("a"))
         {
-            xv = -10;
-            //anim.SetBool("IsRunning",true);
+            xv = -5;
+            sr.flipX = true;
+            anim.SetBool("IsRunning",true);
         }
         rb.velocity = new Vector2(xv,0);
+    }
+    
+
+    void Jumping()
+    {
+        
     }
 
  void OnCollisionEnter2D( Collision2D col )

@@ -7,6 +7,7 @@ public class PlayerScript : MonoBehaviour
     private SpriteRenderer sr;
     public Animator anim;
     public GameObject player;
+    public GameObject playerInstance;
     public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,11 @@ public class PlayerScript : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+    
+    }
+    void PlayerSpawn()
+    {
+        playerInstance =  Instantiate(player);
     }
 
     // Update is called once per frame
@@ -65,6 +71,8 @@ public class PlayerScript : MonoBehaviour
         if(col.gameObject.tag == "rock")
         {      
             print("hit!");
+            Destroy(player);
+            
         }
     
     }

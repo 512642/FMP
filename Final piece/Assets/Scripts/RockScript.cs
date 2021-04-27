@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class RockScript : MonoBehaviour
 {
-    public GameObject prefabRock;
-    public GameObject rockInstance;
+
     public GameObject rock;
     // Start is called before the first frame update
     void Start()
@@ -19,17 +18,12 @@ public class RockScript : MonoBehaviour
        Timer();
     }
 
-    void Spawn()
-    {
-        rockInstance = Instantiate(prefabRock);
-    }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         if(col.gameObject.name == "Player")
         {
-            Destroy(rockInstance);
-            Destroy(prefabRock);
+            Destroy(rock);
         }
     }
     void Timer()
@@ -44,6 +38,7 @@ public class RockScript : MonoBehaviour
         }
         if (counter > 300)
         {
+            Instantiate(rock);
             counter = 0;
         }
     }

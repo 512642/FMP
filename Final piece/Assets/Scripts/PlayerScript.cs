@@ -29,6 +29,7 @@ public class PlayerScript : MonoBehaviour
         anim.SetBool("IsRunning", false);
         sr.flipX = false;
         float xv = 0;
+
         if (Input.GetKey("d"))
         {
             xv = 5;
@@ -45,8 +46,16 @@ public class PlayerScript : MonoBehaviour
     
 
     void Jumping()
-    {
-        
+    {        
+        anim.SetBool("IsJumping",false);
+        float yv = 0;
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            yv = 5;    
+            anim.SetBool("IsJumping", true);
+        }
+        // rb.velocity = new Vector2(0,yv);
     }
 
  void OnCollisionEnter2D( Collision2D col )

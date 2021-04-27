@@ -366,6 +366,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7228448201264994187, guid: 3fd95b68ef19c7342b0bae23e4da34f9, type: 3}
+      propertyPath: m_GravityScale
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 7228448201264994190, guid: 3fd95b68ef19c7342b0bae23e4da34f9, type: 3}
       propertyPath: m_Name
       value: Rock

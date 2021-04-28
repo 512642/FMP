@@ -31,15 +31,18 @@ public class RockScript : MonoBehaviour
         int counter = 0;
         
         
-        while (counter < 300 )
+        while (counter < 100000 )
         {
             counter ++;
-            print (counter);
         }
-        if (counter > 300)
+        if (counter > 100000)
         {
             Instantiate(rock);
             counter = 0;
+        }
+        if (counter == 100000)
+        {
+            print("spawn");
         }
     }
 }

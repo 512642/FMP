@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RockScript : MonoBehaviour
 {
-
+    private int counter;
     public GameObject rock;
     // Start is called before the first frame update
     void Start()
@@ -25,24 +25,26 @@ public class RockScript : MonoBehaviour
         {
             Destroy(rock);
         }
+        if(col.gameObject.tag == "platform")
+        {
+            Destroy(rock);
+        }
     }
     void Timer()
-    {
-        int counter = 0;
-        
-        
-        while (counter < 100000 )
+    {       
+        int counter = 3;
+
+        if (counter > 0)
         {
-            counter ++;
+           InvokeRepeating("Subtract", 0.1f, 1.0f);
         }
-        if (counter > 100000)
-        {
-            Instantiate(rock);
-            counter = 0;
-        }
-        if (counter == 100000)
+        else 
         {
             print("spawn");
         }
+    }
+    void Subtract()
+    {
+        counter -= 1;
     }
 }

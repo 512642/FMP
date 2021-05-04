@@ -82,12 +82,12 @@ public class PlayerScript : MonoBehaviour
 
  void OnCollisionEnter2D( Collision2D col )
     {
-        while (col.gameObject.tag == "platform")
+        if (col.gameObject.tag == "platform")
         {
             grounded = true;
             jumpSpeed = SetJump;
         }
-        
+
         else
         {
             grounded = false;

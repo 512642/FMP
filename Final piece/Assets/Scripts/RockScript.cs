@@ -45,6 +45,6 @@ public class RockScript : MonoBehaviour
     }
     void Subtract()
     {
-        counter -= 1;
+        counter = counter -= 1;
     }
 }

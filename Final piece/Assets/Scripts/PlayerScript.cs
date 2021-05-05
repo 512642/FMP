@@ -7,8 +7,7 @@ public class PlayerScript : MonoBehaviour
 
     [Header ("Variables")]
     [SerializeField] float          jumpSpeed = 0;
-    [SerializeField] float          SetJump = 5000.0f;
-    [SerializeField] float          jumpZero = 0;
+    [SerializeField] float          SetJump = 20;
     [SerializeField] float          runSpeed = 0;
     [SerializeField] float          SetSpeed = 10;
     
@@ -72,11 +71,24 @@ public class PlayerScript : MonoBehaviour
 
 
         anim.SetBool("IsJumping",false);
-        if (Input.GetKeyDown("w"))
+        if (grounded == true)
         {
-            rb.AddForce( new Vector2(0,jumpSpeed));
-            anim.SetBool("IsJumping", true);
+        
+            if (Input.GetKey("w"))
+            {
+                rb.velocity =  new Vector2(0,jumpSpeed);
+                anim.SetBool("IsJumping", true);
+            }
+            
         }
+
+        if (grounded == false)
+        {
+            jumpSpeed = 0;
+            rb.velocity = new Vector2(0,jumpSpeed);
+        }
+
+
         
     }
 
@@ -85,13 +97,9 @@ public class PlayerScript : MonoBehaviour
         if (col.gameObject.tag == "platform")
         {
             grounded = true;
+            anim.SetBool("IsJumping", false);
             jumpSpeed = SetJump;
-        }
-
-        else
-        {
-            grounded = false;
-            jumpSpeed = jumpZero;
+            print("can jump");
         }
      
         if(col.gameObject.tag == "rock")
@@ -99,5 +107,13 @@ public class PlayerScript : MonoBehaviour
             Destroy(player);            
         }
         
+    }
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "platform")
+        {
+            grounded = false;
+            print("can't jump");
+        }
     }
 }

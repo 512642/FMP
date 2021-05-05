@@ -25,7 +25,7 @@ public class RockScript : MonoBehaviour
         {
             Destroy(rock);
         }
-        if(col.gameObject.tag == "platform")
+        if(col.gameObject.tag == "void")
         {
             Destroy(rock);
         }
@@ -36,7 +36,7 @@ public class RockScript : MonoBehaviour
 
         if (counter > 0)
         {
-           InvokeRepeating("Subtract", 0.1f, 1.0f);
+           Subtract();
         }
         else 
         {
@@ -45,6 +45,6 @@ public class RockScript : MonoBehaviour
     }
     void Subtract()
     {
-        counter = counter -= 1;
+        counter = counter - 1;
     }
 }

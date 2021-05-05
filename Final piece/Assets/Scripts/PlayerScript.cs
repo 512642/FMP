@@ -14,13 +14,14 @@ public class PlayerScript : MonoBehaviour
     
 
     [Header("Player Parts")]
-     public GameObject player;
+    public GameObject player;
     public GameObject playerInstance;
     public Rigidbody2D rb;
     public Rigidbody2D playerRigidbody;
 
     [Header("Player Bools")]
     [SerializeField] bool           grounded = false;
+    [SerializeField] public bool           alive = true;           
 
     [Header("Animation")]
     public Animator anim;
@@ -104,7 +105,13 @@ public class PlayerScript : MonoBehaviour
      
         if(col.gameObject.tag == "rock")
         {
-            Destroy(player);            
+            Destroy(player);   
+            alive = false;         
+        }
+
+        if (col.gameObject.tag == "void")
+        {
+            Destroy(player);
         }
         
     }

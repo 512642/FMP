@@ -63,7 +63,6 @@ public class PlayerScript : MonoBehaviour
             runSpeed = -SetSpeed;
         }
         rb.velocity = new Vector2(runSpeed,0);
-        print(runSpeed);
     }
     
 

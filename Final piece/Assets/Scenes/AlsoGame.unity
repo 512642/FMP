@@ -883,11 +883,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6858058612660446901, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18
+      value: 18.35
       objectReference: {fileID: 0}
     - target: {fileID: 6858058612660446901, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.84
+      value: 2.08
       objectReference: {fileID: 0}
     - target: {fileID: 6858058612660446901, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -931,11 +931,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6858058612660446920, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
       propertyPath: m_Mass
-      value: 10
+      value: 0.98252213
       objectReference: {fileID: 0}
     - target: {fileID: 6858058612660446920, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
       propertyPath: m_Constraints
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858058612660446920, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858058612660446920, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
+      propertyPath: m_Simulated
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6858058612660446923, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
       propertyPath: playerRigidbody

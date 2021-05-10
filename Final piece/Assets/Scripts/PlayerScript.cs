@@ -50,15 +50,18 @@ public class PlayerScript : MonoBehaviour
     void Jumping()
         {        
 
+            anim.SetBool("IsRunning", true);
 
-            anim.SetBool("IsJumping",false);
+
             if (grounded == true)
             {
-            
+                anim.SetBool("IsJumping",false);
                 if (Input.GetKey("w"))
                 {
-                    rb.velocity =  new Vector2(0,jumpSpeed);
+                    rb.velocity =  new Vector2(0,jumpSpeed);                    
+                    
                     anim.SetBool("IsJumping", true);
+         
                 }
                 
             }
@@ -67,6 +70,7 @@ public class PlayerScript : MonoBehaviour
             {
                 jumpSpeed = 0;
                 rb.velocity = new Vector2(runSpeed,jumpSpeed);
+                anim.SetBool("IsRunning", false);
             }
 
 
@@ -74,18 +78,17 @@ public class PlayerScript : MonoBehaviour
         }
     void Running()
     {
-        anim.SetBool("IsRunning", false);
-        sr.flipX = false;
-        runSpeed = 0;
+        float positive = setSpeed;
+        float negative = -setSpeed;
+
         if (Input.GetKey("d"))
         {
-            anim.SetBool("IsRunning",true);
             runSpeed = setSpeed;
+            sr.flipX = false;
         }
         if (Input.GetKey("a"))
         {
             sr.flipX = true;
-            anim.SetBool("IsRunning",true);
             runSpeed = -setSpeed;
         }
         rb.velocity = new Vector2(runSpeed,0);

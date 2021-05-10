@@ -20,8 +20,7 @@ public class PlayerScript : MonoBehaviour
     public Rigidbody2D playerRigidbody;
 
     [Header("Player Bools")]
-    [SerializeField] bool           grounded = false;
-    [SerializeField] public bool           alive = true;           
+    [SerializeField] bool           grounded = false;        
 
     [Header("Animation")]
     public Animator anim;
@@ -42,7 +41,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Running();
+       Running();
         Jumping();
     }
 
@@ -64,6 +63,7 @@ public class PlayerScript : MonoBehaviour
             runSpeed = -SetSpeed;
         }
         rb.velocity = new Vector2(runSpeed,0);
+        print(runSpeed);
     }
     
 
@@ -105,8 +105,7 @@ public class PlayerScript : MonoBehaviour
      
         if(col.gameObject.tag == "rock")
         {
-            Destroy(player);   
-            alive = false;         
+            Destroy(player);        
         }
 
         if (col.gameObject.tag == "void")

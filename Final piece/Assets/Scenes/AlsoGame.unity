@@ -288,7 +288,7 @@ Transform:
   m_GameObject: {fileID: 435290279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.32, y: -5.65, z: -5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 2.18, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1084145743}
-  offset: {x: 0, y: 2, z: -5}
+  offset: {x: 0, y: 4, z: -5}
 --- !u!1 &780296436
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,6 +765,18 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 6858058612660446920, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858058612660446920, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
+      propertyPath: m_UseAutoMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858058612660446920, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
+      propertyPath: m_Mass
+      value: 0.98252213
+      objectReference: {fileID: 0}
     - target: {fileID: 6858058612660446922, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1000,7 +1012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3492291859144809915, guid: efadc666a50484748a686cdb581dd9f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.67
+      value: -4.22
       objectReference: {fileID: 0}
     - target: {fileID: 3492291859144809915, guid: efadc666a50484748a686cdb581dd9f6, type: 3}
       propertyPath: m_LocalPosition.z

@@ -6,10 +6,10 @@ public class PlayerScript : MonoBehaviour
 {
 
     [Header ("Variables")]
-    [SerializeField] float          jumpSpeed = 0;
-    [SerializeField] float          SetJump = 20;
-    [SerializeField] float          runSpeed = 0;
-    [SerializeField] float          SetSpeed = 10;
+    [SerializeField] float          jumpSpeed;
+    [SerializeField] float          setJump;
+    [SerializeField] float          runSpeed;
+    [SerializeField] float          setSpeed;
     
     
 
@@ -41,11 +41,37 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       Running();
+        Running();
         Jumping();
     }
 
 
+
+    void Jumping()
+        {        
+
+
+            anim.SetBool("IsJumping",false);
+            if (grounded == true)
+            {
+            
+                if (Input.GetKey("w"))
+                {
+                    rb.velocity =  new Vector2(0,jumpSpeed);
+                    anim.SetBool("IsJumping", true);
+                }
+                
+            }
+
+            if (grounded == false)
+            {
+                jumpSpeed = 0;
+                rb.velocity = new Vector2(runSpeed,jumpSpeed);
+            }
+
+
+            
+        }
     void Running()
     {
         anim.SetBool("IsRunning", false);
@@ -54,65 +80,41 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKey("d"))
         {
             anim.SetBool("IsRunning",true);
-            runSpeed = SetSpeed;
+            runSpeed = setSpeed;
         }
         if (Input.GetKey("a"))
         {
             sr.flipX = true;
             anim.SetBool("IsRunning",true);
-            runSpeed = -SetSpeed;
+            runSpeed = -setSpeed;
         }
         rb.velocity = new Vector2(runSpeed,0);
     }
     
 
-    void Jumping()
-    {        
-
-
-        anim.SetBool("IsJumping",false);
-        if (grounded == true)
-        {
         
-            if (Input.GetKey("w"))
+
+    void OnCollisionEnter2D( Collision2D col )
+        {
+            if (col.gameObject.tag == "platform")
             {
-                rb.velocity =  new Vector2(0,jumpSpeed);
-                anim.SetBool("IsJumping", true);
+                grounded = true;
+                anim.SetBool("IsJumping", false);
+                jumpSpeed = setJump;
+                print("can jump");
+            }
+        
+            if(col.gameObject.tag == "rock")
+            {
+                Destroy(player);        
+            }
+
+            if (col.gameObject.tag == "void")
+            {
+                Destroy(player);
             }
             
         }
-
-        if (grounded == false)
-        {
-            jumpSpeed = 0;
-            rb.velocity = new Vector2(0,jumpSpeed);
-        }
-
-
-        
-    }
-
- void OnCollisionEnter2D( Collision2D col )
-    {
-        if (col.gameObject.tag == "platform")
-        {
-            grounded = true;
-            anim.SetBool("IsJumping", false);
-            jumpSpeed = SetJump;
-            print("can jump");
-        }
-     
-        if(col.gameObject.tag == "rock")
-        {
-            Destroy(player);        
-        }
-
-        if (col.gameObject.tag == "void")
-        {
-            Destroy(player);
-        }
-        
-    }
     void OnCollisionExit2D(Collision2D col)
     {
         if (col.gameObject.tag == "platform")

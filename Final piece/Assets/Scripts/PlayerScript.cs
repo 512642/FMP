@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -109,12 +110,14 @@ public class PlayerScript : MonoBehaviour
         
             if(col.gameObject.tag == "rock")
             {
-                Destroy(player);        
+                Destroy(player);      
+                SceneManager.LoadScene("Game");
             }
 
             if (col.gameObject.tag == "void")
             {
                 Destroy(player);
+                SceneManager.LoadScene("Game");
             }
             
         }

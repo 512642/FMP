@@ -5,5 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
-    
+    public void Quit()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("AlsoGame", LoadSceneMode.Additive);
+    }
 }

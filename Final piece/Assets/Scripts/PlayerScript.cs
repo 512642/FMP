@@ -111,13 +111,13 @@ public class PlayerScript : MonoBehaviour
             if(col.gameObject.tag == "rock")
             {
                 Destroy(player);      
-                SceneManager.LoadScene("Game");
+                SceneManager.LoadScene("EndGameScene");
             }
 
             if (col.gameObject.tag == "void")
             {
                 Destroy(player);
-                SceneManager.LoadScene("Game");
+                SceneManager.LoadScene("EndGameScene");
             }
             
         }

@@ -13,14 +13,16 @@ public class ScoreScript : MonoBehaviour
 
     public void UpdateScore()
     {
-        inGameScore = GameObject.Find("InGameScore").GetComponent<Text>();
+        //inGameScore = GameObject.Find("InGameScore").GetComponent<Text>();
         score += Time.deltaTime;
         print(score);
+        //inGameScore.text = "Score:" + score;
+  
     }
     /*public void FinalScore()
     {
         finalScoreText = GameObject.Find("ScoreDisplay").GetComponent<Text>();
-        score = 
+        finalScore = score; 
 
 
         finalScoreText.text = "Final Score: " + finalScore;

@@ -10,8 +10,16 @@ public class ScoreScript : MonoBehaviour
     Text finalScoreText;
     private float finalScore = 0;
 
+    //void Update()
+    //{
+     //   if ()
+       // {
+         //   afasfaf;
+       // }
+    //}
 
-    public void UpdateScore()
+
+    public void Score()
     {
         //inGameScore = GameObject.Find("InGameScore").GetComponent<Text>();
         score += Time.deltaTime;

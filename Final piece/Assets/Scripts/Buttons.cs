@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
+    public ScoreScript ScoreScript; // gives access to ScoreScript script.
+
+    void Start()
+    {
+        
+    }
+
     void Update()
     {
         if(Input.GetKey(KeyCode.Escape))
@@ -28,3 +35,6 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 }
+
+    
+

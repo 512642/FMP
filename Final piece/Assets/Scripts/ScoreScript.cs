@@ -2,37 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class ScoreScript : MonoBehaviour
 {
-    public float score = 0;
-    Text inGameScore;
-    Text finalScoreText;
-    private float finalScore = 0;
+    int score;
+    float counter = 0;
+    public Transform player;
+    public Text scoreText;
+    public float multiplyer = 5000;
 
-    //void Update()
-    //{
-     //   if ()
-       // {
-         //   afasfaf;
-       // }
-    //}
-
-
-    public void Score()
+    void Update()
     {
-        //inGameScore = GameObject.Find("InGameScore").GetComponent<Text>();
-        score += Time.deltaTime;
-        print(score);
-        //inGameScore.text = "Score:" + score;
-  
+        score = Mathf.RoundToInt(counter * multiplyer);
+        counter = counter + Time.deltaTime;
+        scoreText.text = score.ToString();
+        TimeSpan time = TimeSpan.FromSeconds(counter);
     }
-    /*public void FinalScore()
-    {
-        finalScoreText = GameObject.Find("ScoreDisplay").GetComponent<Text>();
-        finalScore = score; 
 
 
-        finalScoreText.text = "Final Score: " + finalScore;
-    }*/
 }

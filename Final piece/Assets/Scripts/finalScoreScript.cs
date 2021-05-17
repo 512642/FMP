@@ -8,6 +8,12 @@ public class finalScoreScript : MonoBehaviour
 {
     public Text DisplayFinal;
     float endScore;
+    public GameObject scoreText;
+
+    void Start()
+    {
+        ScoreScript ScoreScript = scoreText.GetComponent<ScoreScript>();
+    }
 
 
     void Update()
@@ -15,15 +21,19 @@ public class finalScoreScript : MonoBehaviour
         GetScore();
         GetFinalScore();
     }
-    //pulls the save of the variable "finalsScore" from ScoreScript.
+    //pulls the save of the variable "finalScore" from ScoreScript.
     void GetScore()
     {
-        endScore = PlayerPrefs.GetFloat("finalScore");  
+        PlayerPrefs.GetFloat("finalScore");
+        endScore = ScoreScript.SetScore();
+
     }
 
     public void GetFinalScore()
     {   
         
-        DisplayFinal.text = "Final Score: " + endScore.ToString();
+        DisplayFinal.text = "Final Score: " + endScore.ToString(); 
+        print (endScore);
+        
     }
 }

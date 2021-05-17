@@ -94,7 +94,8 @@ public class PlayerScript : MonoBehaviour
         }
         rb.velocity = new Vector2(runSpeed,0);
     }
-    
+
+
 
         
 
@@ -111,6 +112,7 @@ public class PlayerScript : MonoBehaviour
             {
                 Destroy(player);      
                 SceneManager.LoadScene("EndGameScene");
+
             }
 
             if (col.gameObject.tag == "void")

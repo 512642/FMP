@@ -395,7 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplayFinal: {fileID: 385887212}
-  endScore: 0
+  scoreText: {fileID: 9124283469349891519, guid: f39fc6773038be54c9a4c367a6b64f0d, type: 3}
 --- !u!1 &654536275
 GameObject:
   m_ObjectHideFlags: 0

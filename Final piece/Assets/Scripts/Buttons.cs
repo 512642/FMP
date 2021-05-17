@@ -27,7 +27,7 @@ public class Buttons : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("AlsoGame", LoadSceneMode.Additive);
+        SceneManager.LoadScene("AlsoGame");
     }
 
     public void Pause()

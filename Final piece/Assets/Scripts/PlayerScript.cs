@@ -105,7 +105,6 @@ public class PlayerScript : MonoBehaviour
                 grounded = true;
                 anim.SetBool("IsJumping", false);
                 jumpSpeed = setJump;
-                print("can jump");
             }
         
             if(col.gameObject.tag == "rock")
@@ -126,7 +125,6 @@ public class PlayerScript : MonoBehaviour
         if (col.gameObject.tag == "platform")
         {
             grounded = false;
-            print("can't jump");
         }
     }
 }

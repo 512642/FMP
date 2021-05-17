@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 509214645521991212, guid: 12f2be20aaea4b7468dbab80af3f885f, type: 3}
       propertyPath: m_Name
-      value: platform 1
+      value: raised grass
       objectReference: {fileID: 0}
     - target: {fileID: 509214645521991212, guid: 12f2be20aaea4b7468dbab80af3f885f, type: 3}
       propertyPath: m_TagString
@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 509214645521991214, guid: 12f2be20aaea4b7468dbab80af3f885f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.45
+      value: 21.016
       objectReference: {fileID: 0}
     - target: {fileID: 509214645521991214, guid: 12f2be20aaea4b7468dbab80af3f885f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 509214645521991214, guid: 12f2be20aaea4b7468dbab80af3f885f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.7829213
+      value: 1.8322242
       objectReference: {fileID: 0}
     - target: {fileID: 509214645521991214, guid: 12f2be20aaea4b7468dbab80af3f885f, type: 3}
       propertyPath: m_LocalScale.y

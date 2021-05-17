@@ -15,6 +15,7 @@ public class finalScoreScript : MonoBehaviour
         GetScore();
         GetFinalScore();
     }
+    //pulls the save of the variable "finalsScore" from ScoreScript.
     void GetScore()
     {
         endScore = PlayerPrefs.GetFloat("finalScore");  

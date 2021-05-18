@@ -7,6 +7,7 @@ using System;
 public class ScoreScript : MonoBehaviour
 {    
     int score;
+    public static float counterSave;
     public static float finalScore;
     public float counter = 0;
     public Transform player;
@@ -18,18 +19,18 @@ public class ScoreScript : MonoBehaviour
     void Update()
     {
         score = Mathf.RoundToInt(counter * multiplyer);
-        counter = counter + Time.deltaTime;                         //adds 1, 100 times per second to variable counter due to the multiplyer above.
-        scoreText.text = "Score: " + score.ToString();              // prints score: *score*.
-        finalScore = score;            
+        counter = counter + Time.deltaTime;        //adds 1, 100 times per second to variable counter due to the multiplyer above.
+        counterSave = score;                 
+        scoreText.text = "Score: " + score.ToString();              // prints score: *score*.            
         TimeSpan time = TimeSpan.FromSeconds(counter); 
                
     }
-    
+
+
     //creates the save for "finalScore" to store the score.
-    public void SetScore(float finalScore)
+    public void SetScore(float finalScore, float counterSave)
     {
-        
-        PlayerPrefs.SetFloat("finalScore", counter);
+        PlayerPrefs.SetFloat("finalScore", counterSave);
     }
 
     }

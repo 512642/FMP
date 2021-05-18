@@ -27,12 +27,12 @@ public class Buttons : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("AlsoGame");
+        SceneManager.LoadScene("Level 1");
     }
 
     public void Pause()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Main menu");
     }
 }
 

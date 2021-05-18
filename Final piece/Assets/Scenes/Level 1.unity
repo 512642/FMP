@@ -564,7 +564,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3492291859144809913, guid: efadc666a50484748a686cdb581dd9f6, type: 3}
       propertyPath: m_Name
-      value: platform 1 (10)
+      value: EndOfLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492291859144809913, guid: efadc666a50484748a686cdb581dd9f6, type: 3}
+      propertyPath: m_TagString
+      value: levelEnd
       objectReference: {fileID: 0}
     - target: {fileID: 3492291859144809915, guid: efadc666a50484748a686cdb581dd9f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -728,7 +732,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e449bb3a1d8a545459767afcbf8ccab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1475687287}
 --- !u!1001 &591827302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1359,15 +1362,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6858058612660446927, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
---- !u!1 &1475687287 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6858058612660446927, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
-  m_PrefabInstance: {fileID: 1475687286}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1740910667
 PrefabInstance:
   m_ObjectHideFlags: 0

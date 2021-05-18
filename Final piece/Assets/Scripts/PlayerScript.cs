@@ -95,7 +95,10 @@ public class PlayerScript : MonoBehaviour
         rb.velocity = new Vector2(runSpeed,0);
     }
 
-
+    public void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 
         
 
@@ -119,6 +122,11 @@ public class PlayerScript : MonoBehaviour
             {
                 Destroy(player);
                 SceneManager.LoadScene("EndGameScene");
+            }
+            
+            if (col.gameObject.tag == "levelEnd")
+            {
+                NextScene();
             }
             
         }

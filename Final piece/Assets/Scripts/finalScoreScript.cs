@@ -24,7 +24,7 @@ public class finalScoreScript : MonoBehaviour
     //pulls the save of the variable "finalScore" from ScoreScript.
     void GetScore()
     {
-        PlayerPrefs.GetFloat("finalScore");
+      float endScore = PlayerPrefs.GetFloat("finalScore");
       //  endScore = ScoreScript.SetScore();
 
     }
@@ -33,7 +33,6 @@ public class finalScoreScript : MonoBehaviour
     {   
         
         DisplayFinal.text = "Final Score: " + endScore.ToString(); 
-        print (endScore);
         
     }
 }

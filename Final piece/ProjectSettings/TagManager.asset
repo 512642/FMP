@@ -7,6 +7,8 @@ TagManager:
   - rock
   - platform
   - void
+  - player
+  - levelEnd
   layers:
   - Default
   - TransparentFX

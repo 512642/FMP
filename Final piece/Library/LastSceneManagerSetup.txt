@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/EndGameScene.unity
+- path: Assets/Scenes/AlsoGame.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

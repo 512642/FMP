@@ -25,7 +25,7 @@ public class finalScoreScript : MonoBehaviour
     void GetScore()
     {
         PlayerPrefs.GetFloat("finalScore");
-        endScore = ScoreScript.SetScore();
+      //  endScore = ScoreScript.SetScore();
 
     }
 

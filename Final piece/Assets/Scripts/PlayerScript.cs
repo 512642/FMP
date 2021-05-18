@@ -43,7 +43,13 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         Running();
-        Jumping();
+        Jumping();        
+    
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            Pause();
+        }
+    
     }
 
 
@@ -98,6 +104,11 @@ public class PlayerScript : MonoBehaviour
     public void NextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void Pause()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 
         

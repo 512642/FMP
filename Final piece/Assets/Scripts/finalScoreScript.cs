@@ -13,8 +13,8 @@ public class finalScoreScript : MonoBehaviour
 
     void Start()
     {
-        GameObject script = GameObject.Find("InGameScore");
-        ScoreScript ScoreScript = script.GetComponent<ScoreScript>();
+        GameObject script = GameObject.Find("InGameScore"); // reference object with script for access
+        ScoreScript ScoreScript = script.GetComponent<ScoreScript>(); // reference script from the reference gameobject above
     }
 
 
@@ -29,12 +29,12 @@ public class finalScoreScript : MonoBehaviour
     //pulls the save of the variable "finalScore" from ScoreScript.
     void GetScore()
     {
-      endScore = ScoreScript.counterSave;
+      endScore = ScoreScript.counterSave; // sets endScore to counterSave from ScoreScript Script
     }
 
     public void GetFinalScore()
     {   
-        DisplayFinal.text = "Final Score: " + endScore.ToString();        
+        DisplayFinal.text = "Final Score: " + endScore.ToString();    //change the text shown on DisplayFinal to show score
     }
 }
 

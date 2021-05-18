@@ -21,7 +21,6 @@ public class Buttons : MonoBehaviour
     }
     public void Quit()
     {
-        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 
@@ -32,7 +31,7 @@ public class Buttons : MonoBehaviour
 
     public void Pause()
     {
-        SceneManager.LoadScene("Main menu");
+        SceneManager.LoadScene("Main Menu");
     }
 }
 

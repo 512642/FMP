@@ -10,6 +10,10 @@ public void MainMenuReturn()
 {
     SceneManager.LoadScene("Main Menu");
 }
+public void RetryLevel1()
+{
+    SceneManager.LoadScene("Level 1");
+}
 
 
 

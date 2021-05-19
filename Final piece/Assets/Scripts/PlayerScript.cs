@@ -58,6 +58,7 @@ public class PlayerScript : MonoBehaviour
         {        
 
             anim.SetBool("IsRunning", true);
+            jumpSpeed = 200;
 
 
             if (grounded == true)

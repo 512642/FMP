@@ -1452,7 +1452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6858058612660446923, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
       propertyPath: setJump
-      value: 200
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6858058612660446927, guid: b27fe363c6ec17149aa395513c720cf6, type: 3}
       propertyPath: m_Name

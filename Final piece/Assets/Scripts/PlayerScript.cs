@@ -11,6 +11,8 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] float          setJump;
     [SerializeField] float          runSpeed;
     [SerializeField] float          setSpeed;
+    [SerializeField] float          fallMultiplier = 3.5f;
+    [SerializeField] float          lowJumpMultiplier = 2f;
     
     
 
@@ -49,6 +51,7 @@ public class PlayerScript : MonoBehaviour
         {
             Pause();
         }
+        print(rb.velocity.y);
     
     }
 
@@ -58,7 +61,7 @@ public class PlayerScript : MonoBehaviour
         {        
 
             anim.SetBool("IsRunning", true);
-            jumpSpeed = 20;
+            jumpSpeed = 15;
 
 
             if (grounded == true)
@@ -74,6 +77,10 @@ public class PlayerScript : MonoBehaviour
                 }
                 
             }
+            if(rb.velocity.y < 13.7)
+            {
+                   rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            }            
 
             if (grounded == false)
             {

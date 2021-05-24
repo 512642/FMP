@@ -51,7 +51,6 @@ public class PlayerScript : MonoBehaviour
         {
             Pause();
         }
-        print(rb.velocity.y);
     
     }
 
